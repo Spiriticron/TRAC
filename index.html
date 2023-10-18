@@ -52747,7 +52747,7 @@
 ];
 
             var imageSrc = "https://github.com/Spiriticron/TRAC/blob/main/image.png?raw=true";
-            var selectedMarker = null;
+            var selectedWindow = null;
                
             for (var i = 0; i < positions.length; i ++) {
                
@@ -52787,9 +52787,9 @@
 
             function makeOverListener(map, marker, infowindow) {
                 return function() {
-                    infowindow.close();
+                    selectedWindow.close();
                     infowindow.open(map, marker);
-                    selectedMarker = marker;
+                    selectedWindow = infowindow;
                 };
             }
 
