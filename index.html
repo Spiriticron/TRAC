@@ -52787,7 +52787,7 @@
 
             function makeOverListener(map, marker, infowindow) {
                 return function() {
-                    selectedWindow.close();
+                    infowindow.close();
                     infowindow.open(map, marker);
                     selectedWindow = infowindow;
                 };
